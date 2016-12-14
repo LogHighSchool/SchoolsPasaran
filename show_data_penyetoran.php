@@ -27,7 +27,6 @@ $query=mysqli_query($conn, $sql) or die("1.php: get employees");
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;  // when there is no search parameter then total number rows = total number filtered rows.
 
-
 // getting total number records without any search
 $sql = "SELECT km.user,km.petugas_edit,km.tanggal_edit,km.jam_edit,km.id, km.no_faktur, km.keterangan, km.ke_akun, km.jumlah, km.tanggal, km.jam, km.user, da.nama_daftar_akun ";
 $sql.= "FROM penyetoran km INNER JOIN daftar_akun da ON km.ke_akun = da.kode_daftar_akun ";
